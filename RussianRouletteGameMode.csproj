@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>RussianRouletteGameMode</AssemblyName>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <DebugType>embedded</DebugType>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.IL2CPP">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/BepInEx.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader.Core">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/BepInEx.Preloader.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Cpp2IL.Core">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/Cpp2IL.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomGameModes">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/plugins/CustomGameModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="IndexRange">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/IndexRange.dll</HintPath>
+    </Reference>
+    <Reference Include="LibAssemblyUnhollower">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/LibAssemblyUnhollower.dll</HintPath>
+    </Reference>
+    <Reference Include="LibCpp2IL">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/LibCpp2IL.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/core/UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unity-libs/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unity-libs/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/home/slash/.local/share/Steam/steamapps/common/Crab Game/BepInEx/unhollowed/UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <Target Name="ClearReferenceCopyLocalPaths" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+  </Target>
+</Project>
